@@ -3,7 +3,7 @@
     <h1 align="center"> My Blog </h1>
     <h3 align="center"> This is Muneer Blog</h3>
     {% for blog in all_blog %}
-        {{ blog.title }}<br>
+        <a href="{% url 'blog:detail' blog.id %}">{{ blog.title }}</a> <br>
         {{ blog.date }}<br>
         {{ blog.description }}<br>
     {% endfor %}
