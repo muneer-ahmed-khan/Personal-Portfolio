@@ -1,11 +1,17 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
+
+
+
+    <img src="{% static 'portfolio/IMG-20190909-WA0222.jpg' %}" alt="my pic"/>
+    <a href="{% static 'portfolio/resume.pdf' %}">Resume</a><br>
 
     {% for project in projects %}
 
         {{ project.title }} <br>
         {{ project.description }}<br>
-        <img src="{{ project.image.url }}" height="100" width="100" alt="simpel images"/><br>
+        <img src="{{ project.image.url }}" height="100" width="100" alt="simple images"/><br>
         {% if project.url %}
             <a href="{{ project.url }}">Link</a><br>
         {% endif %}

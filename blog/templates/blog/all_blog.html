@@ -1,4 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1> this is my page stuff</h1>
+    <h1 align="center"> My Blog </h1>
+    <h3 align="center"> This is Muneer Blog</h3>
+    {% for blog in all_blog %}
+        {{ blog.title }}<br>
+        {{ blog.date }}<br>
+        {{ blog.description }}<br>
+    {% endfor %}
 {% endblock %}
